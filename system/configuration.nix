@@ -83,7 +83,8 @@
     wget
     firefox
     kitty
-    dmenu
+    # window manager packages
+    dmenu xmobar feh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -106,7 +107,7 @@
   # networking.firewall.enable = false;
 
   # Environment variables
-  environment.variables.XMONAD_CONFIG_DIR = "./xmonad";
+  environment.variables.XMONAD_CONFIG_DIR = "$HOME/.nixos-config/xmonad";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
