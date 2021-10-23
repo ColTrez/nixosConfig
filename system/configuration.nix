@@ -87,6 +87,13 @@
     dmenu xmobar feh
   ];
 
+  # fonts
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
