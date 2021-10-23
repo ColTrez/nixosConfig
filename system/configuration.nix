@@ -83,6 +83,7 @@
     wget
     firefox
     kitty
+    dmenu
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
