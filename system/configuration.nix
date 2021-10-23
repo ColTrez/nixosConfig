@@ -48,7 +48,7 @@
   services.xserver.windowManager.xmonad = {
     enable = true;
     enableContribAndExtras = true;
-    config = ./xmonad/xmonad.hs;
+    config = ../xmonad/xmonad.hs;
   };
   
 
@@ -83,7 +83,6 @@
     wget
     firefox
     kitty
-    gnupg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
