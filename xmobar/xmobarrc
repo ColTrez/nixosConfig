@@ -15,7 +15,7 @@ Config { font = "xft:Noto Sans Mono:pixelsize=12"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "EGPF" ["-t","<station>: <tempF>F",
+       , commands = [ Run Weather "KPHX" ["-t","<station>: <tempF>F",
                                           "-L","40","-H","110",
                                           "--high","lightred",
                                           "--low","lightblue"] 36000
@@ -27,6 +27,6 @@ Config { font = "xft:Noto Sans Mono:pixelsize=12"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "%cpu% | %memory% | %enp1s0% }\
-                    \{ %date% | %EGPF%"
+                    \{ %date% | %KPHX%"
        }
 
