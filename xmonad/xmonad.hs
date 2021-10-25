@@ -246,7 +246,8 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-  xmproc <- spawnPipe "xmobar $HOME/.nixos-config/xmobar/xmobarrc"
+  topPanel <- spawnPipe "xmobar $HOME/.nixos-config/xmobar/xmobarrc"
+  systemPanel <- spawnPipe "xmobar $HOME/.nixos-config/xmobar/systemPanel"
   xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding

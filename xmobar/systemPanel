@@ -5,7 +5,7 @@ Config { font = "xft:Noto Sans Mono:pixelsize=12"
        , bgColor = "black"
        , fgColor = "grey"
        , alpha = 255
-       , position = Top
+       , position = Bottom
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -15,14 +15,13 @@ Config { font = "xft:Noto Sans Mono:pixelsize=12"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "KPHX" ["-t","<station>: <tempF>F",
-                                          "-L","40","-H","110",
-                                          "--high","lightred",
-                                          "--low","lightblue"] 36000
+       , commands = [ Run Network "enp1s0" ["-L","0","-H","32"] 10
+                    , Run Cpu ["-t", "CPU Usage: <total>%"] 10
+                    , Run Memory ["-t","Memory Usage: <usedratio>%"] 10
                     , Run Date "%a %b %_d %Y %I:%M%P" "date" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "}{ %date% | %KPHX%"
+       , template = "%cpu% | %memory% | Network Usage: %enp1s0%"
        }
 
